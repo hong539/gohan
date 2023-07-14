@@ -15,6 +15,16 @@ result = kks.convert(text)
 for item in result:
     print("{}: kana '{}', hiragana '{}', romaji: '{}'".format(item['orig'], item['kana'], item['hira'], item['hepburn']))
 
+text = "二次元"
+result = kks.convert(text)
+for item in result:
+    print("{}: kana '{}', hiragana '{}', romaji: '{}'".format(item['orig'], item['kana'], item['hira'], item['hepburn']))
+
+text = "nijigen"
+result = kks.convert(text)
+for item in result:
+    print("{}: kana '{}', hiragana '{}', romaji: '{}'".format(item['orig'], item['kana'], item['hira'], item['hepburn']))    
+
 # かな: kana 'カナ', hiragana: 'かな', romaji: 'kana'
 # 漢字: kana 'カンジ', hiragana: 'かんじ', romaji: 'kanji'
 # 煮込み

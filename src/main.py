@@ -1,6 +1,16 @@
 import pykakasi
 kks = pykakasi.kakasi()
-text = "かな漢字"
+text = "煮込み"
+result = kks.convert(text)
+for item in result:
+    print("{}: kana '{}', hiragana '{}', romaji: '{}'".format(item['orig'], item['kana'], item['hira'], item['hepburn']))
+    
+text = "教えてくれ、五飛"
+result = kks.convert(text)
+for item in result:
+    print("{}: kana '{}', hiragana '{}', romaji: '{}'".format(item['orig'], item['kana'], item['hira'], item['hepburn']))
+
+text = "早瀬ユウカ"
 result = kks.convert(text)
 for item in result:
     print("{}: kana '{}', hiragana '{}', romaji: '{}'".format(item['orig'], item['kana'], item['hira'], item['hepburn']))

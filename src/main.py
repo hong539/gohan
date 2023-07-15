@@ -8,16 +8,17 @@ test_file = tests_path + "/self_test.txt"
 
 f = open(test_file, 'r')
 lines = f.readlines()
-print(f)
-print(lines)
+# print(f)
+# print(lines)
 
-kks = pykakasi.kakasi()
-result = kks.convert(lines)
-for item in result:
-    print("{}: kana '{}', hiragana '{}', romaji: '{}'".format(item['orig'], item['kana'], item['hira'], item['hepburn']))
+def transfer(text):
+    kks = pykakasi.kakasi()
+    result = kks.convert(text)
+    for item in result:
+        print("{}: kana '{}', hiragana '{}', romaji: '{}'".format(item['orig'], item['kana'], item['hira'], item['hepburn']))
 
-# kks = pykakasi.kakasi()
-# text = "煮込み"
-# result = kks.convert(text)
-# for item in result:
-#     print("{}: kana '{}', hiragana '{}', romaji: '{}'".format(item['orig'], item['kana'], item['hira'], item['hepburn']))
+count = 0
+for line in lines:
+    count += 1
+    # print(line.strip())
+    transfer(line.strip())

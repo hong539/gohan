@@ -1,7 +1,7 @@
 # import os
 from pathlib import Path
 import pykakasi
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 import pandas as pd
 
 gohan_project_path = Path.cwd()
@@ -28,7 +28,12 @@ for line in lines:
 
 
 def parser():
-        pass
+        target_table = pd.read_html("https://bluearchive.wikiru.jp/?%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E4%B8%80%E8%A6%A7#j5a6cb9f")        
+        print("type:", type(target_table))
+        print("len:", len(target_table))
+        print(target_table)
+        # print(target_table[0])
+        
 
 if __name__ == "__main__":
         parser()        

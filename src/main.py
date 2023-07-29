@@ -1,10 +1,13 @@
-import os
+# import os
 from pathlib import Path
 import pykakasi
+from bs4 import BeautifulSoup
+import pandas as pd
 
 gohan_project_path = Path.cwd()
 tests_path = str(gohan_project_path) + "/tests"
-test_file = tests_path + "/self_test.txt"
+# test_file = tests_path + "/self_test.txt"
+test_file = tests_path + "/example.txt"
 
 f = open(test_file, 'r')
 lines = f.readlines()
@@ -22,3 +25,10 @@ for line in lines:
     count += 1
     # print(line.strip())
     transfer(line.strip())
+
+
+def parser():
+        pass
+
+if __name__ == "__main__":
+        parser()        
